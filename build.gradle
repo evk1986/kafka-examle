@@ -22,8 +22,11 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.apache.kafka:kafka-streams'
     implementation 'org.springframework.kafka:spring-kafka'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
+    implementation ("org.projectlombok:lombok:1.18.16")
+    annotationProcessor ("org.projectlombok:lombok:1.18.16")
+    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:2.3.4.RELEASE")
+    compile group: 'org.apache.kafka', name: 'connect-json', version: '2.6.0'
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
