@@ -1,1 +1,2 @@
 rootProject.name = 'kafka'
+//include('git-events-source-connector', 'git-events-sink-file-connector')

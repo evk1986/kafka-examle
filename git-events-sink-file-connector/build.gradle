@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.evk.kafka'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.apache.kafka', name: 'connect-api', version: '2.6.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.3'
+}
+
+test {
+    useJUnitPlatform()
+}
